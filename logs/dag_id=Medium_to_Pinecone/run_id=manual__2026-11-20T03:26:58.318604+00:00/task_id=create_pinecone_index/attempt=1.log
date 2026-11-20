@@ -1,0 +1,37 @@
+[2026-11-20T03:27:09.779+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-20T03:27:09.861+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Medium_to_Pinecone.create_pinecone_index manual__2026-11-20T03:26:58.318604+00:00 [queued]>
+[2026-11-20T03:27:09.900+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Medium_to_Pinecone.create_pinecone_index manual__2026-11-20T03:26:58.318604+00:00 [queued]>
+[2026-11-20T03:27:09.904+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2026-11-20T03:27:12.121+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): create_pinecone_index> on 2026-11-20 03:26:58.318604+00:00
+[2026-11-20T03:27:12.139+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=238) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-11-20T03:27:12.149+0000] {standard_task_runner.py:72} INFO - Started process 244 to run task
+[2026-11-20T03:27:12.148+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Medium_to_Pinecone', 'create_pinecone_index', 'manual__2026-11-20T03:26:58.318604+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/build_pinecone.py', '--cfg-path', '/tmp/tmpnap8x0h4']
+[2026-11-20T03:27:12.169+0000] {standard_task_runner.py:105} INFO - Job 28: Subtask create_pinecone_index
+[2026-11-20T03:27:12.362+0000] {task_command.py:467} INFO - Running <TaskInstance: Medium_to_Pinecone.create_pinecone_index manual__2026-11-20T03:26:58.318604+00:00 [running]> on host ea139ecf998b
+[2026-11-20T03:27:12.791+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Medium_to_Pinecone' AIRFLOW_CTX_TASK_ID='create_pinecone_index' AIRFLOW_CTX_EXECUTION_DATE='2026-11-20T03:26:58.318604+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-20T03:26:58.318604+00:00'
+[2026-11-20T03:27:12.805+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-11-20T03:27:14.737+0000] {indexes.py:197} INFO - Listing indexes
+[2026-11-20T03:27:15.033+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes "HTTP/1.1 200 OK"
+[2026-11-20T03:27:15.158+0000] {indexes.py:315} INFO - Deleting index 'semantic-search-fast'
+[2026-11-20T03:27:15.390+0000] {_client.py:1026} INFO - HTTP Request: DELETE https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 202 Accepted"
+[2026-11-20T03:27:15.404+0000] {indexes.py:233} INFO - Describing index 'semantic-search-fast'
+[2026-11-20T03:27:15.773+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 200 OK"
+[2026-11-20T03:27:21.049+0000] {indexes.py:233} INFO - Describing index 'semantic-search-fast'
+[2026-11-20T03:27:21.218+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 404 Not Found"
+[2026-11-20T03:27:21.223+0000] {indexes.py:620} INFO - Creating index name='semantic-search-fast'
+[2026-11-20T03:27:21.453+0000] {indexes.py:233} INFO - Describing index 'semantic-search-fast'
+[2026-11-20T03:27:21.538+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 200 OK"
+[2026-11-20T03:27:26.544+0000] {indexes.py:233} INFO - Describing index 'semantic-search-fast'
+[2026-11-20T03:27:26.739+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 200 OK"
+[2026-11-20T03:27:26.742+0000] {indexes.py:233} INFO - Describing index 'semantic-search-fast'
+[2026-11-20T03:27:26.850+0000] {_client.py:1026} INFO - HTTP Request: GET https://api.pinecone.io/indexes/semantic-search-fast "HTTP/1.1 200 OK"
+[2026-11-20T03:27:26.853+0000] {logging_mixin.py:190} INFO - Pinecone index 'semantic-search-fast' created successfully
+[2026-11-20T03:27:26.857+0000] {python.py:240} INFO - Done. Returned value was: semantic-search-fast
+[2026-11-20T03:27:26.971+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-11-20T03:27:26.973+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=Medium_to_Pinecone, task_id=create_pinecone_index, run_id=manual__2026-11-20T03:26:58.318604+00:00, execution_date=20261120T032658, start_date=20261120T032709, end_date=20261120T032726
+[2026-11-20T03:27:27.147+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-20T03:27:27.218+0000] {standard_task_runner.py:217} INFO - Process not found (most likely exited), stop collecting metrics
+[2026-11-20T03:27:27.273+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-11-20T03:27:27.277+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

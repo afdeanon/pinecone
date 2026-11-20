@@ -1,0 +1,21 @@
+[2026-11-20T03:27:13.178+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-20T03:27:13.304+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Medium_to_Pinecone.preprocess_data manual__2026-11-20T03:26:58.318604+00:00 [queued]>
+[2026-11-20T03:27:13.362+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Medium_to_Pinecone.preprocess_data manual__2026-11-20T03:26:58.318604+00:00 [queued]>
+[2026-11-20T03:27:13.364+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2026-11-20T03:27:14.114+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): preprocess_data> on 2026-11-20 03:26:58.318604+00:00
+[2026-11-20T03:27:14.147+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=242) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-11-20T03:27:14.157+0000] {standard_task_runner.py:72} INFO - Started process 246 to run task
+[2026-11-20T03:27:14.158+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Medium_to_Pinecone', 'preprocess_data', 'manual__2026-11-20T03:26:58.318604+00:00', '--job-id', '29', '--raw', '--subdir', 'DAGS_FOLDER/build_pinecone.py', '--cfg-path', '/tmp/tmpl7tsebn4']
+[2026-11-20T03:27:14.188+0000] {standard_task_runner.py:105} INFO - Job 29: Subtask preprocess_data
+[2026-11-20T03:27:14.612+0000] {task_command.py:467} INFO - Running <TaskInstance: Medium_to_Pinecone.preprocess_data manual__2026-11-20T03:26:58.318604+00:00 [running]> on host ea139ecf998b
+[2026-11-20T03:27:15.188+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Medium_to_Pinecone' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2026-11-20T03:26:58.318604+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-20T03:26:58.318604+00:00'
+[2026-11-20T03:27:15.193+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-11-20T03:27:16.481+0000] {logging_mixin.py:190} INFO - Preprocessed data saved to /opt/***/data/medium_data/medium_preprocessed.csv
+[2026-11-20T03:27:16.488+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/data/medium_data/medium_preprocessed.csv
+[2026-11-20T03:27:16.627+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-11-20T03:27:16.631+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=Medium_to_Pinecone, task_id=preprocess_data, run_id=manual__2026-11-20T03:26:58.318604+00:00, execution_date=20261120T032658, start_date=20261120T032713, end_date=20261120T032716
+[2026-11-20T03:27:17.137+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-20T03:27:17.473+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-20T03:27:17.486+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

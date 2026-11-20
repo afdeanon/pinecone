@@ -35,7 +35,7 @@ with DAG(
     def download_data():
         """Download Medium dataset using requests"""
         # Create data directory if it doesn't exist
-        data_dir = '/tmp/medium_data'
+        data_dir = '/opt/airflow/data/medium_data'
         os.makedirs(data_dir, exist_ok=True)
         
         # File path to save data
@@ -78,7 +78,7 @@ with DAG(
         df['id'] = df.reset_index(drop='index').index.astype(str)
         
         # Save preprocessed data
-        preprocessed_path = '/tmp/medium_data/medium_preprocessed.csv'
+        preprocessed_path = '/opt/airflow/data/medium_data/medium_preprocessed.csv'
         df.to_csv(preprocessed_path, index=False)
         
         print(f"Preprocessed data saved to {preprocessed_path}")
@@ -166,7 +166,7 @@ with DAG(
                 })
             
             # Upsert to Pinecone
-            index.upsert(upsert_data)
+            index.upsert(vectors=upsert_data)
         
         print(f"Successfully upserted {len(df)} records to Pinecone")
         return index_name

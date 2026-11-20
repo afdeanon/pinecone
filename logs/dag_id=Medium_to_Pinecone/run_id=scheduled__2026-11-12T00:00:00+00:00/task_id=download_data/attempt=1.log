@@ -1,0 +1,9 @@
+[2026-11-20T02:59:38.007+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-20T02:59:38.371+0000] {taskinstance.py:2604} INFO - Dependencies not met for <TaskInstance: Medium_to_Pinecone.download_data scheduled__2026-11-12T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2026-11-20T02:59:38.455+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run
+[2026-11-20T02:59:41.861+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-20T02:59:43.419+0000] {taskinstance.py:2604} INFO - Dependencies not met for <TaskInstance: Medium_to_Pinecone.download_data scheduled__2026-11-12T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2026-11-20T02:59:43.916+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run
+[2026-11-20T02:59:50.033+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-20T02:59:50.479+0000] {taskinstance.py:2604} INFO - Dependencies not met for <TaskInstance: Medium_to_Pinecone.download_data scheduled__2026-11-12T00:00:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2026-11-20T02:59:50.844+0000] {local_task_job_runner.py:166} INFO - Task is not able to be run
